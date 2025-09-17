@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 import os
 import pickle
-from model.predict import make_prediction
+from src.model.predict import make_prediction
 
 app = Flask(__name__)
 
