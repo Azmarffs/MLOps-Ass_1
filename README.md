@@ -34,3 +34,4 @@ docker run -p 5000:5000 ml-app:local
 - Code quality on pushes/PRs to `dev`
 - Unit tests on PRs targeting `test`
 - Jenkins builds and pushes Docker image on merges to `master`, with email notifications
+\nTrigger: 2025-09-17 18:12:34Z
