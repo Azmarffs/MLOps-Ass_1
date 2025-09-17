@@ -1,12 +1,16 @@
 name: Master Gate Checks
 
 on:
+  push:
+    branches: [ master ]
   pull_request:
     branches: [ master ]
 
 jobs:
   gate:
     runs-on: ubuntu-latest
+    env:
+      PYTHONPATH: ${{ github.workspace }}
     steps:
       - uses: actions/checkout@v3
 
@@ -27,5 +31,5 @@ jobs:
 
       - name: Run unit tests (smoke)
         run: |
-          pytest -q
+          python -m pytest -q
 
