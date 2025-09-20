@@ -3,8 +3,8 @@ pipeline {
     
     environment {
         DOCKER_HUB_CREDENTIALS = credentials('docker-hub-credentials')
-        DOCKER_IMAGE_NAME = 'azmarffs/mlops-app'
-        ADMIN_EMAIL = 'admin@example.com'
+        DOCKER_IMAGE_NAME = 'abdullah1234123/ml-appp'
+        ADMIN_EMAIL = 'i222515@nu.edu.pk'
     }
     
     stages {
