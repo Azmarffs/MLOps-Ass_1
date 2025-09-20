@@ -3,15 +3,15 @@ pipeline {
     
     environment {
         DOCKER_HUB_CREDENTIALS = credentials('docker-hub-credentials')
-        DOCKER_IMAGE_NAME = 'your-group/ml-app'
-        ADMIN_EMAIL = 'admin@yourgroup.com'
+        DOCKER_IMAGE_NAME = 'azmarffs/mlops-app'
+        ADMIN_EMAIL = 'admin@example.com'
     }
     
     stages {
         stage('Checkout') {
             steps {
                 git branch: 'master', 
-                    url: 'https://github.com/your-group/your-repo.git'
+                    url: 'https://github.com/Azmarffs/MLOps-Ass_1.git'
             }
         }
         
