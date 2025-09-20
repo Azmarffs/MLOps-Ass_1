@@ -10,8 +10,8 @@ class IdentityModel:
 def test_make_prediction_list_of_dicts():
     model = IdentityModel()
     payload = [
-        {"feature1": 0.1, "feature2": 0.2},
-        {"feature1": 0.3, "feature2": 0.4},
+        {"Pclass": 3, "Sex": "male", "Age": 22, "SibSp": 1, "Parch": 0, "Fare": 7.25, "Embarked": "S"},
+        {"Pclass": 1, "Sex": "female", "Age": 38, "SibSp": 1, "Parch": 0, "Fare": 71.2833, "Embarked": "C"},
     ]
     preds = make_prediction(model, payload)
     assert preds == [0, 1]
@@ -19,7 +19,15 @@ def test_make_prediction_list_of_dicts():
 
 def test_make_prediction_dict_of_lists():
     model = IdentityModel()
-    payload = {"feature1": [0.1, 0.2], "feature2": [0.3, 0.4]}
+    payload = {
+        "Pclass": [3, 1],
+        "Sex": ["male", "female"],
+        "Age": [22, 38],
+        "SibSp": [1, 1],
+        "Parch": [0, 0],
+        "Fare": [7.25, 71.2833],
+        "Embarked": ["S", "C"],
+    }
     preds = make_prediction(model, payload)
     assert preds == [0, 1]
 
