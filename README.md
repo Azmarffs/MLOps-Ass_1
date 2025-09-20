@@ -1,6 +1,6 @@
 # ML App CI/CD Pipeline
 
-This  repository contains a Flask-based ML web app with CI/CD using GitHub Actions and Jenkins.
+This repository contains a Flask-based ML web app with CI/CD using GitHub Actions and Jenkins.
 
 ## Quickstart
 
